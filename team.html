@@ -1,0 +1,896 @@
+<!DOCTYPE html>
+
+
+
+<html>
+<meta name="viewport" content="width=device-width, initial-scale=1" >
+<style>
+
+:root {
+  --priText:  #294273;
+  --secText: #3B3B47;
+  --purple: #7D3FA6;
+  --dblue: #35278C;
+  --blue: #418FBF;
+  --green: #82D9D9;
+  --dgreen: #29A699;
+}
+
+/******************************NAV*****************************/
+.nav.navbar-nav li{
+  text-align: center;
+  display: inline;
+  font-family: 'Montserrat';
+}
+
+.nav.navbar-nav {
+  text-align: center;
+  display: block;
+  width: 100%;
+  margin: 0px;
+  margin-left: 0px;
+  margin-right: 0px;
+}
+
+/* Style the links inside the navigation bar */
+.nav.navbar-nav a {
+  display:inline-block;
+  color: gray;
+  padding: 1.4vw 1.6vw;
+  text-decoration: none;
+  font-size: 20px;
+}
+
+/* Change the color of links on hover */
+.nav.navbar-nav a:hover {
+  color: black;
+}
+
+/* Add a color to the active/current link */
+.nav.navbar-nav a:active {
+  color: black;
+  font-weight: bold;
+}
+
+.nav.navbar-nav .active {
+  color: black;
+  font-weight: bold;
+}
+
+ul {
+  box-shadow: 0px -30px 50px -10px rgba(0, 0, 0, 0.5);
+  list-style-type: none;
+  overflow: hidden;
+  background-color: var(--green);
+  text-align:center;
+  position: relative;
+  display: inline-block;
+  margin: 0;
+  padding: 0px;
+  margin: 0px;
+}
+
+ul li{
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/************************************************************************/
+
+.box{
+  text-align: center;
+  width: 100%;
+  padding: 0px;
+  margin: 0px;
+  top: 0;
+  position: fixed;
+  z-index: -1;
+}
+
+body {
+  font-family: 'Hind', sans-serif;
+  padding: 0;
+  margin: 0;
+}
+
+.rest{
+  margin-top: 30vw;
+}
+
+.gene {
+  background: rgba(0, 0, 0, 0.5);
+  color: white;
+  width: auto;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 2.5vw;
+  text-align: center;
+  display: inline-block;
+  box-shadow: 0px 0px 50px 50px rgba(0, 0, 0, 0.5);
+  border-radius: 100px;
+  z-index: -1;
+  margin-bottom: 0px;
+  /* margin-top: 50px; */
+  border: none;
+}
+
+#back{
+  top:0;
+  height: 60vw;
+  z-index: -3;
+  display: none;
+  position: fixed;
+}
+
+#myVideo{
+  display: inline-block;
+  position: fixed;
+  padding: 0px;
+  top: 0px;
+  left: 0px;
+  height: 60vw;
+  width: auto;
+  z-index: -2;
+}
+
+@media screen and (max-width: 800px) {
+    #myVideo {display: none;}
+    #back {display: inline-block;}
+    .button {font-size: 50px; margin-bottom: 30px;}
+}
+
+#logo{
+  height: 15vw;
+  width: auto;
+}
+
+.button {
+  background-color: transparent;
+  border: .2vw solid white;
+  color: white;
+  padding: 1.2vw 2.8vw;
+  border-radius: 10px;
+  text-align: center;
+  display: inline-block;
+  font-size: 1.8vw;
+  margin-bottom: 3vw;
+  font-family: 'Hind';
+  cursor: pointer;
+}
+
+.button span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+.button span:after {
+  content: '\00bb';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+
+.button:hover span {
+  padding-right: 2.5vw;
+}
+
+.button:hover span:after {
+  opacity: 1;
+  right: 0;
+}
+
+</style>
+
+<meta charset="UTF-8">
+<link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Hind:wght@300&display=swap" rel="stylesheet">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+<link rel="icon" href="Z_white4.png" >
+<link rel="apple-touch-icon" href="Z.jpg">
+<title>Our Team</title>
+
+<div class="box">
+  <div class="gene"><br>
+    <!-- <h1>GENErationZ</h1> -->
+    <a href="index.html"><img id="logo" src="full_white.png" alt="GENErationZ"></img></a>
+  </div>
+<br>
+
+<a href="apply.html" class="button"><span>
+  Register
+</span>  </a><br>
+</div>
+
+<video autoplay loop autobuffer muted playsinline webkit-playsinline id="myVideo">
+  <source src="720p.mp4" type="video/mp4">
+  </video>
+
+<img id="back" src="dna.jpg">
+
+<div class="rest">
+
+<div id="nav">
+  <nav class="bg-dark navbar-expand-sm navbar justify-content-center sticky-top">
+    <div class="container-fluid">
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="mentorship20.html">Mentorship 2020</a></li>
+        <!-- <li><a href = "mentorship21.html">Mentorship 2021</a></li> -->
+        <li><a href="team.html" class="active">Team</a></li>
+        <!-- ** for toggle down ** <li class="dropdown">
+        <a class="dropdown-toggle" data-toggle="dropdown" href="#"><span class="caret"></span></a>
+        <ul class="dropdown-menu">
+        <li><a href="#"></a></li>
+        <li><a href="#"></a></li>
+      </ul>
+    </li> -->
+    <li><a href="apply.html">Apply</a></li>
+    <li><a href="contact.html">Contact</a></li>
+  </ul>
+</div>
+</div>
+</nav>
+
+
+</div>
+
+
+  <style>
+
+  /* POPUP */
+
+  .cancel
+  {
+    display:none;
+    position:fixed;
+    top:1vw;
+    right:1vw;
+    background:rgb(245,245,245);
+    color:black;
+    height:42px;
+    width:35px;
+    font-size:30px;
+    text-decoration:none;
+    text-align:center;
+    font-weight:bold;
+    cursor: pointer;
+    z-index: 5;
+  }
+
+  .cancel .show{
+    display: block;
+  }
+
+  .internal{
+    opacity: 100%;
+    border: 1px solid var(--green);
+    display:inline-block;
+    position:fixed;
+    top:5vw;
+    right: 10vw;
+    background-color: white;
+    color:black;
+    height: auto;
+    width:80%;
+    cursor: auto;
+    z-index: 5;
+  }
+
+  @media screen and (max-width: 800px) {
+      .internal {width: 100%; height: 100%; top:0vw; right:0vw;}
+      .popup {width: 100%; height: 100%; overflow: scroll; }
+      .itext {overflow: scroll; height: 35%;}
+  }
+
+  .itext{
+    display: inline-block;
+    width: 70%;
+    margin: 10px;
+    text-align: left;
+    padding-bottom: 40px;
+    font-size: 15px;
+  }
+
+  /* The actual popup (appears on top) */
+  .shadow {
+    position: fixed;
+    background: black;
+    opacity: 70%;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    z-index: 1;
+    cursor: auto;
+    display: block;
+  }
+
+  .popuptext{
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    display: none;
+    z-index: 5;
+    text-align: center;
+    /* height: ; */
+    min-height: 100vh;
+  }
+
+  .popup {
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+    width: 100%;
+  }
+
+  .popuptext .show {
+    display: flex;
+  }
+
+
+  /* REST */
+
+  img.per{
+    border: 3px solid;
+    border-image: linear-gradient(to bottom right, var(--dblue) 0%, var(--green) 100%);
+    border-image-slice: 1;
+    border-width: 3px;
+    padding: 1px;
+    width: 210px;
+    height: 280px;
+    display: inline-block;
+  }
+
+  img.mentor{
+    width: 150px;
+    height: 200px;
+    border: 3px solid var(--green);
+    padding: 1px;
+  }
+
+  img.i{
+    width: 210px;
+    height: 280px;
+    border: 3px solid var(--green);
+  }
+
+  .name{
+    font-weight: bold;
+    font-size: 20px;
+  }
+
+  .name.mentor{
+    font-size: 15px;
+    font-weight: normal;
+  }
+
+  .name.mentor.curr{
+    font-weight: bold;
+  }
+
+  .position{
+    font-style: italic;
+    font-size: 15px;
+  }
+
+  .bio{
+    font-size: 15px;
+  }
+
+  .person{
+    padding: 25px;
+    display: inline-block;
+    text-align: center;
+    font-family: "Hind";
+  }
+
+  .mentor.person{
+    padding: 15px;
+  }
+
+  .innerbox{
+    width: 70%;
+    display: inline-block;
+  }
+
+  .innerbox2{
+    width: 85%;
+    display: inline-block;
+  }
+
+  .p {
+    color: white;
+    text-align:center;
+    display: inline-block;
+    margin: 0px;
+  }
+
+  .footer{
+    position: relative;
+    text-align: center;
+    bottom: 0px;
+    width: 100%;
+    background-color: #333;
+    padding-top: 30px;
+    padding-bottom: 30px;
+  }
+
+  .content{
+    background: white;
+    margin: 0px;
+    width: 100%;
+    padding: 0px;
+    padding-bottom: 50px;
+    display: inline-block;
+    text-align: center;
+  }
+
+  .head .green{
+    color: var(--green);
+  }
+
+  .head {
+    white-space: pre;
+    font-family: 'Montserrat';
+    display: inline-block;
+    margin: 0px;
+    font-size: 25px;
+    padding: 30px;
+    font-weight: bold;
+    color: var(--priText);
+    /* border-top: 3px solid;
+    border-image: linear-gradient(to right, var(--dblue) 0%, var(--green) 100%);
+    border-image-slice: 1;
+    border-width: 3px; */
+  }
+
+  .text {
+    color: var(--secText);
+    padding: 0px;
+    margin: 0px;
+    width: 800px;
+    display: inline-block;
+    text-align: center;
+    font-style: "Hind";
+    padding-bottom: 50px; }
+
+    </style>
+
+    <meta charset="UTF-8">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Hind:wght@300&display=swap" rel="stylesheet">
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="jquery.js"></script>
+
+    <script>
+
+    $(function(){
+      $('#footer').load('footer.html');
+    });
+
+
+    $(function(){
+
+      $('.popup').click(function(){
+        var popup = $(this).find('.popuptext');
+        popup.toggle("show");
+        popup = $(this).find('.cancel');
+        popup.toggle("show");
+        // document.getElementsByClassName("content").style.display = 'none';
+        document.getElementsByClassName('content').style.color = 'tomato';
+        alert("hi");
+      });
+
+       $('.internal').click(function(){
+         return false;
+       });
+
+       // $('.cancel').click(function(){
+       //   // var popup = $(this).find('.popuptext');
+       //   // popup.toggle("show");
+       // }
+
+    });
+
+    </script>
+
+    <!--  MISSION STATEMENT -->
+    <div class="content">
+      <br>
+      <div class="head"><a class="green">[   </a> Lead Team <a class="green">   ]</a></div><br>
+
+      <div class="innerbox">
+        <div class="person">
+          <div class="popup">
+            <img src="photos/arya.jpg" class="per" alt="Arya Sapra">
+            <div class="popuptext">
+              <div class="shadow"></div>
+              <div class="internal"><br><br>
+                <img src="photos/arya.jpg" class="per" alt="Arya Sapra">
+                <div class="itext">
+                <div class="name">Arya Sapra</div>
+                <div class="position">Co-founder</div>
+                Arya Sapra is a rising junior at Thomas Jefferson High School for Science and Technology. Arya is an active member of his school's Lincoln Douglas Debate Team, and currently serves as the Publicist of TJ LD Debate. Arya has a deep passion for biology, and can be found attending meetings of various different clubs related to biology such as Neuroscience Society. Arya also holds a passion for music, and has participated in multiple piano festivals. Overall, he hopes to be able to share his love for biology with other students.
+              </div>
+              </div>
+            </div>
+            <div class="cancel">x</div>
+            <div class="name">Arya Sapra</div>
+            <div class="position">Co-founder</div>
+          </div>
+        </div>
+        <div class="person">
+          <div class="popup">
+            <img src="photos/isra.jpg" class="per" alt="Isra Satiar">
+            <div class="popuptext">
+              <div class="shadow"></div>
+              <div class="internal"><br><br>
+                <img src="photos/isra.jpg" class="per" alt="Isra Satiar">
+                <div class="itext">
+                <div class="name">Isra Satiar</div>
+                <div class="position">Co-founder</div>
+                Isra Satiar, currently attending Thomas Jefferson High School for Science and Technology, is a rising junior. She has a strong interest in improving the mental health of her community and serves as the President of TJ Send-a-Smile. Her zeal and energy couple towards her passion for biology, which has motivated her to also lead TJ’s Biology Olympiad club. When she’s not dedicating her time towards these activities, she can be found engaging younger children in STEM through TJ KAST and teaching Quran and Arabic calligraphy at her local mosque.
+              </div>
+              </div>
+            </div>
+            <div class="cancel">x</div>
+            <div class="name">Isra Satiar</div>
+            <div class="position">Co-founder</div>
+          </div>
+        </div>
+        <br>
+        <div class="person">
+          <div class="popup">
+            <img src="photos/elena.jpg" class="per" alt="Elena Rangelov">
+            <div class="popuptext">
+              <div class="shadow"></div>
+              <div class="internal"><br><br>
+                <img src="photos/elena.jpg" class="per" alt="Elena Rangelov">
+                <div class="itext">
+                <div class="name">Elena Rangelov</div>
+                <div class="position">Web Developer</div>
+                Elena is a rising junior at Thomas Jefferson High School for Science and Technology. She loves computer coding and is an officer for her girls’ coding club at school, and she's a member of various women empowerment organizations such as Built By Girls and Women Who Code. Elena is also a part of many environmental justice groups and is working to help our environment 24/7, as well as working with LGBTQ+ support groups like Casa Ruby and SMYAL. She has a creative side too; she’s passionate about piano and enjoys working with many art mediums! Her hard work and friendliness have gotten her wherever she needs to be. She’s always open to talk to anyone with similar interests and is free to answer any questions!
+              </div>
+              </div>
+            </div>
+            <div class="cancel">x</div>
+            <div class="name">Elena Rangelov</div>
+            <div class="position">Web Developer</div>
+          </div>
+        </div>
+        <div class="person">
+          <div class="popup">
+            <img src="photos/hasita.jpg" class="per" alt="Hasita Ravula">
+            <div class="popuptext">
+              <div class="shadow"></div>
+              <div class="internal"><br><br>
+                <img src="photos/hasita.jpg" class="per" alt="Hasita Ravula">
+                <div class="itext">
+                <div class="name">Hasita Ravula</div>
+                <div class="position">Director of Outreach</div>
+                Hasita Ravula is a rising junior at Thomas Jefferson High School for Science and Technology. Hasita can be found in her school’s Students vs. Cancer (Relay for Life) club and Tomorrow’s Women in Science and Technology club. In addition to this, she participates in dance outside of school. Hasita has a great interest in biology and is very excited to help other students explore their passion for biology.
+              </div>
+              </div>
+            </div>
+            <div class="cancel">x</div>
+            <div class="name">Hasita Ravula</div>
+            <div class="position">Director of Outreach</div>
+          </div>
+        </div>
+        <div class="person">
+          <div class="popup">
+            <img src="photos/marina.jpg" class="per" alt="Marina Wang">
+            <div class="popuptext">
+              <div class="shadow"></div>
+              <div class="internal"><br><br>
+                <img src="photos/marina.jpg" class="per" alt="Marina Wang">
+                <div class="itext">
+                <div class="name">Marina Wang</div>
+                <div class="position">Director of Outreach</div>
+                Marina Wang is a rising junior at TJHSST. She loves biology and psychology. She enjoys teaching biology and inspiring a passion for it to those in her community. She taught biology to other students at her local Chinese school, and frequently participates in STEM volunteering for kids. She is a semifinalist for USABO (USA Biology Olympiad). Aside from biology, she has a lifeguard certification and works at her neighborhood pool. In her free time, she loves to figure skate, read and write stories, and bake.
+              </div>
+              </div>
+            </div>
+            <div class="cancel">x</div>
+            <div class="name">Marina Wang</div>
+            <div class="position">Director of Outreach</div>
+          </div>
+        </div>
+
+
+
+      </div>
+      <br><br><br>
+      <div class="head"><a class="green">[     </a> Mentors <a class="green">     ]</a></div><br>
+
+      <div class="innerbox2">
+        <div class="mentor person">
+          <div class="popup">
+            <img src="photos/jeb.jpg" class="mentor per" alt="Jeb Cui">
+            <div class="popuptext">
+              <div class="shadow"></div>
+              <div class="internal"><br><br>
+                <img src="photos/jeb.jpg" class="mentor per i" alt="Jeb Cui">
+                <div class="itext">
+                <div class="name">Jeb Cui</div>
+                <div class="position">Curriculum Designer</div>
+                Jeb Cui is a rising Junior at Thomas Jefferson High School for Science and Technology. He has a passion for science and mathematics. Jeb can be found in his school’s Math Team, Intermediate Computer Team, and Physics Team, and he has attended numerous meetings and guest lectured for the Biology Olympiad club. He loves teaching children and getting them excited about STEM, and on weekends, he enjoys teaching computer science to younger students at his local Chinese school. Outside of academics, he has participated in his school’s cross country team and track and field team.</div>
+              </div>
+              </div>
+            <div class="cancel">x</div>
+            </div>
+            <div class="mentor name curr">Jeb Cui</div>
+            <div class="position">Curriculum Designer</div>
+          </div>
+          <div class="mentor person">
+            <div class="popup">
+              <img src="photos/kyra.jpg" class="mentor per" alt="Kyra Li">
+              <div class="popuptext">
+                <div class="shadow"></div>
+                <div class="internal"><br><br>
+                  <img src="photos/kyra.jpg" class="mentor per i" alt="Kyra Li">
+                  <div class="itext">
+                  <div class="name">Kyra Li</div>
+                  <div class="position">Curriculum Designer</div>
+                Kyra Li is currently a rising junior at Thomas Jefferson High School for Science and Technology. Kyra is an active member of her school’s Biology Olympiad, media, and Future Problem Solvers clubs. Outside of academics, she enjoys playing tennis, and is on her school’s tennis team. Kyra has a strong interest in helping others improve their lives, and has started a project to help people work towards a healthier lifestyle. She also has a passion for biology, and is excited that her knowledge will be used to help younger students discover their interest in biology. </div>
+              </div>
+                </div>
+              <div class="cancel">x</div>
+              </div>
+              <div class="mentor name curr">Kyra Li</div>
+              <div class="position">Curriculum Designer</div>
+            </div>
+            <div class="mentor person">
+              <div class="popup">
+                <img src="photos/aneri.jpg" class="mentor per" alt="Aneri Shah">
+                <div class="popuptext">
+                  <div class="shadow"></div>
+                  <div class="internal"><br><br>
+                    <img src="photos/aneri.jpg" class="mentor per i" alt="Aneri Shah">
+                    <div class="itext">
+                    <div class="name">Aneri Shah</div>
+                    <div class="position">Curriculum Designer</div>
+                Aneri Shah is a rising junior at Thomas Jefferson High School for Science and Technology. She is a member of clubs such as Microbiology club, Future Problem Solvers club, Art club, Codi’s hats, and Japanese Culture club. She also enjoys tutoring students and organizing volunteer opportunities. Aneri loves learning biology and computer science, and wants to teach kids about them. On the weekends, she is a teacher’s assistant at a local Jain school. She plays piano, reads, and dances in her free time. </div>
+                </div>
+                  </div>
+                <div class="cancel">x</div>
+                </div>
+                <div class="mentor name curr">Aneri Shah</div>
+                <div class="position">Curriculum Designer</div>
+              </div>
+              <div class="mentor person">
+                <div class="popup">
+                  <img src="photos/keertana.jpg" class="mentor per" alt="Keertana Yalamanchili">
+                  <div class="popuptext">
+                    <div class="shadow"></div>
+                    <div class="internal"><br><br>
+                      <img src="photos/keertana.jpg" class="mentor per i" alt="Keertana Yalamanchili">
+                      <div class="itext">
+                      <div class="name">Keertana Yalamanchili</div>
+                      <div class="position">Curriculum Designer</div>
+                      Keertana Yalamanchili is a rising junior at Thomas Jefferson High School for Science & Technology. She is passionate about biology and mathematics. She actively attends Medical Society, Neuroscience Society, and Biology Olympiad meetings. She is currently the secretary of the Medical Society and Neuroscience Society, and subject coordinator of TJ Peer Tutoring. In her spare time, she enjoys singing and dancing, playing the violin, reading books, and tutoring. </div>
+                  </div>
+                    </div>
+                  <div class="cancel">x</div>
+                  </div>
+                  <div class="mentor name curr">Keertana Yalamanchili</div>
+                  <div class="position">Curriculum Designer</div>
+                </div>
+      <br>
+        <div class="mentor person">
+          <div class="popup">
+            <img src="photos/diya.jpeg" class="mentor per" alt="Diya Dinesh">
+            <div class="popuptext">
+              <div class="shadow"></div>
+              <div class="internal"><br><br>
+                <img src="photos/diya.jpeg" class="mentor per i" alt="Diya Dinesh">
+                <div class="itext">
+                <div class="name">Diya Dinesh</div>
+                <div class="position">Mentor</div>
+                Diya is a rising Junior at Thomas Jefferson High School for Science and Technology. She is passionate about Computer Science, Neuroscience, and Psychology, and is very interested in finding a bridge between these fields. She takes part in clubs such as Mind Body Medicine Society, Future Problem Solving, Coding Lady Colonials, and Namaste. Outside school, she also follows her passions by tutoring communities. When she isn't immersed in the STEM field, you can find her working on her art or music.</div>
+              </div>
+            <div class="cancel">x</div>
+            </div>
+            <div class="mentor name">Diya Dinesh</div>
+            <div class="position">Mentor</div>
+        </div></div>
+        <div class="mentor person">
+          <div class="popup">
+            <img class="mentor per" src="photos/jaya.JPG" alt="Jayashree Ezhilarasu">
+            <div class="popuptext">
+              <div class="shadow"></div>
+              <div class="internal"><br><br>
+                <img src="photos/jaya.JPG" class="mentor per i" alt="Jayashree Ezhilarasu">
+                <div class="itext">
+                <div class="name">Jayashree Ezhilarasu</div>
+                <div class="position">Mentor</div>
+                Jayashree Ezhilarasu is currently a rising junior at Thomas Jefferson High School for Science and Technology. Jaya is the activities coordinator at her school's biotechnology club and is also an active member of her school's Ocean Bowl.  Outside of academics, she enjoys running and has participated in her school's cross country team. Jaya wishes to spread her passion for biology and help younger students spark interests in the STEM field.</div>
+              </div>
+            <div class="cancel">x</div>
+            </div>
+            <div class="mentor name">Jayashree Ezhilarasu</div>
+            <div class="position">Mentor</div>
+        </div></div>
+        <div class="mentor person">
+          <div class="popup">
+            <img class="mentor per" src="photos/jessica.jpg" alt="Jessica Feng">
+            <div class="popuptext">
+              <div class="shadow"></div>
+              <div class="internal"><br><br>
+                <img src="photos/jessica.jpg" class="mentor per i" alt="Jessica Feng">
+                <div class="itext">
+                <div class="name">Jessica Feng</div>
+                <div class="position">Mentor</div>
+                Jessica Feng is currently a rising junior at Thomas Jefferson High School for Science and Technology. She has a passion for science and writing; participating in Cancer Research Society, Future Problem Solvers, and journalism. In addition to academics, Jessica enjoys ice hockey, golf, and soccer. She's excited to teach kids and utilize her enthusiasm to help them find their own passion. </div>
+            </div><div class="cancel">x</div>
+            </div>
+            <div class="mentor name">Jessica Feng</div>
+            <div class="position">Mentor</div>
+        </div></div>
+        <div class="mentor person">
+          <div class="popup">
+            <img class="mentor per" src="photos/medha.JPG" alt="Medha Gaddam">
+            <div class="popuptext">
+              <div class="shadow"></div>
+              <div class="internal"><br><br>
+                <img src="photos/medha.JPG" class="mentor per i" alt="Medha Gaddam">
+                <div class="itext">
+                <div class="name">Medha Gaddam</div>
+                <div class="position">Mentor</div>
+                Medha is a rising junior at Thomas Jefferson High School for Science and Technology. She has a deep interest in medicine and is a passionate performing artist with training in singing and dance. She has a strong interest in biology and seeks to further her knowledge as a member of TJ's chemistry team, biology society, and neuroscience society - she is also a semifinalist in USA Biology Olympiad. She loves spending time with children and is a lead volunteer in organizations such as KAST and Homework Helpers. In her free time, she can be found reading, playing the violin, and writing poetry!
+                </div></div><div class="cancel">x</div>
+                </div>
+            <div class="mentor name">Medha Gaddam</div>
+            <div class="position">Mentor</div>
+        </div></div>
+        <div class="mentor person">
+          <div class="popup">
+            <img class="mentor per" src="photos/bhavya.jpg" alt="Bhavya Guduru">
+            <div class="popuptext">
+              <div class="shadow"></div>
+              <div class="internal"><br><br>
+                <img src="photos/bhavya.jpg" class="mentor per i" alt="Bhavya Guduru">
+                <div class="itext">
+                <div class="name">Bhavya Guduru</div>
+                <div class="position">Mentor</div>
+                Bhavya is a rising junior at Thomas Jefferson High School for Science and Technology. She is a member of her school's yearbook, Future Problem Solving, and WISE clubs, as well as an Biology Olympiad officer. Outside of academics, she enjoys playing soccer for her school team. Bhavya has a deep interest for biology and is excited to help other students discover their passion for biology.
+                </div></div><div class="cancel">x</div>
+            </div>
+            <div class="mentor name">Bhavya Guduru</div>
+            <div class="position">Mentor</div>
+        </div></div>
+        <div class="mentor person">
+          <div class="popup">
+            <img class="mentor per" src="photos/suchita.jpg" alt="Suchita Hadimani">
+            <div class="popuptext">
+              <div class="shadow"></div>
+              <div class="internal"><br><br>
+                <img src="photos/suchita.jpg" class="mentor per i" alt="Suchita Hadimani">
+                <div class="itext">
+                <div class="name">Suchita Hadimani</div>
+                <div class="position">Mentor</div>
+                Suchita Hadimani is a rising junior at Thomas Jefferson High School for Science and Technology. She loves biology and can often be found in clubs such as Neuroscience Society and Bioinformatics. She enjoys working with students and encouraging them to pursue STEM. She has participated in many tutoring programs such as Spreading the Gift of Learning and WISE. Beyond biology, she also enjoys drawing, baking, and crocheting. Suchita is excited to combine her two favorite things, biology and tutoring, through GENEration Z!
+                </div></div><div class="cancel">x</div>
+            </div>
+            <div class="mentor name">Suchita Hadimani</div>
+            <div class="position">Mentor</div>
+        </div></div>
+
+        <div class="mentor person">
+          <div class="popup">
+            <img class="mentor per" src="photos/sanjay.JPG" alt="Sanjay Jacob">
+            <div class="popuptext">
+              <div class="shadow"></div>
+              <div class="internal"><br><br>
+                <img src="photos/sanjay.JPG" class="mentor per i" alt="Sanjay Jacob">
+                <div class="itext">
+                <div class="name">Sanjay Jacob</div>
+                <div class="position">Mentor</div>
+                Sanjay Jacob is a rising junior at Thomas Jefferson High School for Science and Technology. He is an active member of the Mock Trial and LaunchX clubs (for which he has received awards on a global level), and also is a member of the school lacrosse team. He has been tutoring others for over two years now, and has a passion for the subject of biology and giving back to the community, and hopes to help other realize their passion for biology as a tutor here.
+                </div></div><div class="cancel">x</div>
+            </div>
+            <div class="mentor name">Sanjay Jacob</div>
+            <div class="position">Mentor</div>
+        </div></div>
+        <div class="mentor person">
+          <div class="popup">
+            <img class="mentor per" src="photos/elaine.JPG" alt="Elaine Li">
+            <div class="popuptext">
+              <div class="shadow"></div>
+              <div class="internal"><br><br>
+                <img src="photos/elaine.JPG" class="mentor per i" alt="Elaine Li">
+                <div class="itext">
+                <div class="name">Elaine Li</div>
+                <div class="position">Mentor</div>
+                Elaine Li is a rising junior at Thomas Jefferson High School for Science and Technology. She is a part of her school's media and urban dance clubs, and also participates in LIFE, a club where they teach science concepts to local elementary school students. She has a passion for biology, and is going to be taking Marine Biology this fall! Outside of school, Elaine plays piano and has expressed interest in opening a small business to show her creative side to the world!
+                </div></div><div class="cancel">x</div>
+            </div>
+            <div class="mentor name">Elaine Li</div>
+            <div class="position">Mentor</div>
+        </div></div>
+        <div class="mentor person">
+          <div class="popup">
+            <img class="mentor per" src="photos/isaac.jpg" alt="Isaac Lin">
+            <div class="popuptext">
+              <div class="shadow"></div>
+              <div class="internal"><br><br>
+                <img src="photos/isaac.jpg" class="mentor per i" alt="Isaac Lin">
+                <div class="itext">
+                <div class="name">Isaac Lin</div>
+                <div class="position">Mentor</div>
+                Isaac goes to TJ. He does biology olympiad and chemistry olympiad. He placed top 50 in the US for USABO semifinals and was top 20 in the school for USNCO. In his free time he plays for TJ tennis as well as video games.
+                </div></div><div class="cancel">x</div>
+            </div>
+            <div class="mentor name">Isaac Lin</div>
+            <div class="position">Mentor</div>
+        </div></div>
+        <div class="mentor person">
+          <div class="popup">
+            <img class="mentor per" src="photos/anjali.jpg" alt="Anjali Pagidi">
+            <div class="popuptext">
+              <div class="shadow"></div>
+              <div class="internal"><br><br>
+                <img src="photos/anjali.jpg" class="mentor per i" alt="Anjali Pagidi">
+                <div class="itext">
+                <div class="name">Anjali Pagidi</div>
+                <div class="position">Mentor</div>
+                Anjali Pagidi is a rising junior at Thomas Jefferson High School for Science and Tech. She is passionate about biology and DNA science. Anjali is an active member of Teknos, her school's science writing club as well as the Environmental Impact Club. She is a member of her school's Coding Lady Colonials club and the Biotechnology club. She also loves coding and teaches computer science. Outside of school, her hobbies include dancing and reading.
+                </div></div><div class="cancel">x</div>
+            </div>
+            <div class="mentor name">Anjali Pagidi</div>
+            <div class="position">Mentor</div>
+        </div></div>
+        <div class="mentor person">
+          <div class="popup">
+            <img class="mentor per" src="photos/default.png" alt="Bhaswith Suresh">
+            <div class="popuptext">
+              <div class="shadow"></div>
+              <div class="internal"><br><br>
+                <img src="photos/default.png" class="mentor per i" alt="Bhaswith Suresh">
+                <div class="itext">
+                <div class="name">Bhaswith Suresh</div>
+                <div class="position">Mentor</div>
+                </div></div><div class="cancel">x</div>
+            </div>
+            <div class="mentor name">Bhaswith Suresh</div>
+            <div class="position">Mentor</div>
+        </div></div>
+        <div class="mentor person">
+          <div class="popup">
+            <img class="mentor per" src="photos/default.png" alt="Brian Xiao">
+            <div class="popuptext">
+              <div class="shadow"></div>
+              <div class="internal"><br><br>
+                <img src="photos/default.png" class="mentor per i" alt="Brian Xiao">
+                <div class="itext">
+                <div class="name">Brian Xiao</div>
+                <div class="position">Mentor</div>
+                </div></div><div class="cancel">x</div>
+            </div>
+            <div class="mentor name">Brian Xiao</div>
+            <div class="position">Mentor</div>
+        </div></div>
+
+
+      </div>
+
+    </div>
+    <div id="footer"></div>
+
+
+    <div class="footer">
+
+      <div class="p">  &copy GENErationZ 2020</div>
+    </div>
+
+    </html>

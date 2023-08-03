@@ -1,0 +1,437 @@
+<!DOCTYPE html>
+
+
+
+<html>
+<meta name="viewport" content="width=device-width, initial-scale=1" >
+<style>
+
+:root {
+  --priText:  #294273;
+  --secText: #3B3B47;
+  --purple: #7D3FA6;
+  --dblue: #35278C;
+  --blue: #418FBF;
+  --green: #82D9D9;
+  --dgreen: #29A699;
+}
+
+/******************************NAV*****************************/
+.nav.navbar-nav li{
+  text-align: center;
+  display: inline;
+  font-family: 'Montserrat';
+}
+
+.nav.navbar-nav {
+  text-align: center;
+  display: block;
+  width: 100%;
+  margin: 0px;
+  margin-left: 0px;
+  margin-right: 0px;
+}
+
+/* Style the links inside the navigation bar */
+.nav.navbar-nav a {
+  display:inline-block;
+  color: gray;
+  padding: 1.4vw 1.6vw;
+  text-decoration: none;
+  font-size: 20px;
+}
+
+/* Change the color of links on hover */
+.nav.navbar-nav a:hover {
+  color: black;
+}
+
+/* Add a color to the active/current link */
+.nav.navbar-nav a:active {
+  color: black;
+  font-weight: bold;
+}
+
+.nav.navbar-nav .active {
+  color: black;
+  font-weight: bold;
+}
+
+ul {
+  box-shadow: 0px -30px 50px -10px rgba(0, 0, 0, 0.5);
+  list-style-type: none;
+  overflow: hidden;
+  background-color: var(--green);
+  text-align:center;
+  position: relative;
+  display: inline-block;
+  margin: 0;
+  padding: 0px;
+  margin: 0px;
+}
+
+ul li{
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/************************************************************************/
+
+.box{
+  text-align: center;
+  width: 100%;
+  padding: 0px;
+  margin: 0px;
+  top: 0;
+  position: fixed;
+  z-index: -1;
+}
+
+body {
+  font-family: 'Hind', sans-serif;
+  padding: 0;
+  margin: 0;
+}
+
+.rest{
+  margin-top: 30vw;
+}
+
+.gene {
+  background: rgba(0, 0, 0, 0.5);
+  color: white;
+  width: auto;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 2.5vw;
+  text-align: center;
+  display: inline-block;
+  box-shadow: 0px 0px 50px 50px rgba(0, 0, 0, 0.5);
+  border-radius: 100px;
+  z-index: -1;
+  margin-bottom: 0px;
+  /* margin-top: 50px; */
+  border: none;
+}
+
+#back{
+  top:0;
+  height: 60vw;
+  z-index: -3;
+  display: none;
+  position: fixed;
+}
+
+#myVideo{
+  display: inline-block;
+  position: fixed;
+  padding: 0px;
+  top: 0px;
+  left: 0px;
+  height: 60vw;
+  width: auto;
+  z-index: -2;
+}
+
+@media screen and (max-width: 800px) {
+    #myVideo {display: none;}
+    #back {display: inline-block;}
+    .button {font-size: 50px; margin-bottom: 30px;}
+}
+
+#logo{
+  height: 15vw;
+  width: auto;
+}
+
+.button {
+  background-color: transparent;
+  border: .2vw solid white;
+  color: white;
+  padding: 1.2vw 2.8vw;
+  border-radius: 10px;
+  text-align: center;
+  display: inline-block;
+  font-size: 1.8vw;
+  margin-bottom: 3vw;
+  font-family: 'Hind';
+  cursor: pointer;
+}
+
+.button span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+.button span:after {
+  content: '\00bb';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+
+.button:hover span {
+  padding-right: 2.5vw;
+}
+
+.button:hover span:after {
+  opacity: 1;
+  right: 0;
+}
+
+</style>
+
+<meta charset="UTF-8">
+<link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Hind:wght@300&display=swap" rel="stylesheet">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+<link rel="icon" href="Z_white4.png" >
+<link rel="apple-touch-icon" href="Z.jpg">
+<title>Contact Us</title>
+
+<div class="box">
+  <div class="gene"><br>
+    <!-- <h1>GENErationZ</h1> -->
+    <a href="index.html"><img id="logo" src="full_white.png" alt="GENErationZ"></img></a>
+  </div>
+<br>
+
+<a href="apply.html" class="button"><span>
+  Register
+</span>  </a><br>
+</div>
+
+<video autoplay loop autobuffer muted playsinline webkit-playsinline id="myVideo">
+  <source src="720p.mp4" type="video/mp4">
+  </video>
+
+<img id="back" src="dna.jpg">
+
+<div class="rest">
+
+<div id="nav">
+  <nav class="bg-dark navbar-expand-sm navbar justify-content-center sticky-top">
+    <div class="container-fluid">
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="mentorship20.html">Mentorship 2020</a></li>
+        <!-- <li><a href = "mentorship21.html">Mentorship 2021</a></li> -->
+        <li><a href="team.html">Team</a></li>
+        <!-- ** for toggle down ** <li class="dropdown">
+        <a class="dropdown-toggle" data-toggle="dropdown" href="#"><span class="caret"></span></a>
+        <ul class="dropdown-menu">
+        <li><a href="#"></a></li>
+        <li><a href="#"></a></li>
+      </ul>
+    </li> -->
+    <li><a href="apply.html">Apply</a></li>
+    <li><a href="contact.html" class="active">Contact</a></li>
+  </ul>
+</div>
+</div>
+</nav>
+
+
+</div>
+
+  <style>
+
+  .p {
+   color: white;
+   text-align:center;
+   bottom: 0;
+  }
+
+  .text {
+    color: var(--secText);
+    margin: 0px;
+     width: 70%;
+    display: inline-block;
+    text-align: center;
+    font-style: "Hind";
+    padding-bottom: 5vw;
+    font-size: 18px;
+  }
+
+  .footer{
+   position: relative;
+   text-align: center;
+   bottom: 0px;
+   width: 100%;
+   background-color: #333;
+   padding-top: 30px;
+   padding-bottom: 30px;
+  bottom: 0;
+  width: 100%;
+  height: 2.5rem;            /* Footer height */
+}
+  }
+
+  h4{
+    margin:0;
+    padding: 0px;
+    font-weight: bold;
+  }
+
+
+    .head .green{
+      color: var(--green);
+    }
+
+
+    .head {
+      white-space: pre;
+      font-family: 'Montserrat';
+      display: inline-block;
+      margin: 0px;
+      font-size: 25px;
+      padding: 30px;
+      font-weight: bold;
+      color: var(--priText);
+      /* border-top: 3px solid;
+      border-image: linear-gradient(to right, var(--dblue) 0%, var(--green) 100%);
+      border-image-slice: 1;
+      border-width: 3px; */
+    }
+
+    #nameboxid
+    {
+      width:300px;
+      font-size:15px;
+      display: inline-block;
+      margin: 8px;
+    }
+    #emailboxid
+    {
+      width:100%;
+      font-size:15px;
+      display: inline-block;
+      margin: 8px;
+    }
+    #messagetextboxid
+    {
+      min-width: 695px;
+      max-width: 695px;
+      font-size: 15px;
+      display: inline-block;
+      overflow: auto;
+      resize: height;
+      margin: 8px;
+    }
+    #submit-button{
+      border-radius: 12px;
+      padding: 10px 24px;
+      font-size: 15px;
+      font-family: 'Hind', sans-serif;
+      color: var(--dgreen);
+      border: 2px solid var(--dgreen);
+      background-color: #FFFFFF;
+      display: inline-block;
+    }
+    #submit-button:hover{
+      transition: 0.5s;
+      color: #FFFFFF;
+      border: 2px solid var(--dgreen);
+      background-color: var(--dgreen);
+      cursor: pointer;
+    }
+
+    #submit-button:active{
+    }
+
+    .col {
+      width: 720px;
+      margin-bottom: 8px;
+      display: inline-block;
+    }
+
+    h4 a{
+      color: var(--purple);
+    }
+    h4 a:hover{
+      color: var(--green);
+    }
+
+    input[type=text] {
+      height: 40px;
+      padding: 12px;
+      box-sizing: border-box;
+      border: 1px solid var(--blue);
+      -webkit-transition: 0.5s;
+      transition: 0.5s;
+      outline: none;
+      font-family: 'Hind', sans-serif;
+      display: inline-block;
+    }
+    input[type=text]:focus {
+      border: 1px solid var(--dblue);
+    }
+    textarea{
+      padding: 12px;
+      min-width: 100%;
+      max-width: 100%;
+      min-height: 75px;
+      max-height: 10000px;
+      font-size: 15pt;
+      font-family: 'Hind', sans-serif;
+      border: 1px solid var(--blue);
+      transition: 0.5s;
+      display: inline-block;
+    }
+
+    textarea:focus{
+      border: 1px solid var(--dblue);
+      outline: none;
+    }
+
+      .content{
+        z-index: 0;
+        background: white;
+        margin: 0px;
+        width: 100%;
+        padding: 0px;
+        display: inline-block;
+        /* flex-direction: column;
+        justify-content: center; */
+        text-align: center;
+      }
+
+
+  </style>
+
+  <div class="content">
+
+      <br>
+      <div class="head"><a class="green">[  </a> Contact Us <a class="green">  ]</a></div><br>
+      <div class="text">
+    Thank you for your interest in GENErationZ! We look forward to hearing from you, and we'll get back to you as soon as possible!<br><br>
+        <h4>Our Email: <a href="mailto:usgenerationz@gmail.com">usgenerationz@gmail.com</a></h4>
+</div>
+        <!-- <embed type="text/html" src="formpage.html"  width="800" height="700"> -->
+
+        <!-- <form method="post" action="mailto:mentorresearch@gmail.com" enctype="text/plain" id="form">
+          <div class="col">
+            <input type="text" name="firstname" id="nameboxid" placeholder="First Name" required>
+            <input type="text" name="lastname" id="nameboxid" placeholder="Last Name" required><br>
+            <input type="text" name="mail" id="emailboxid" placeholder="Your Email" required><br>
+            <input type="text" name="mail" id="emailboxid" placeholder="Subject" required><br>
+            <textarea type="text" name="message" placeholder="Message" id="messagetextboxid" required></textarea><br><br>
+            <input type="submit" name="submit" value="Send" id="submit-button">
+          </div>
+        </form>
+      </div> -->
+
+      <div class="footer">
+
+        <div class="p">  &copy GENErationZ 2020</div>
+        </div>
+
+
+    </html>
